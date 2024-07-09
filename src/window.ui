@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="InboxWindow" parent="AdwApplicationWindow">
+    <property name="default-width">600</property>
+    <property name="default-height">300</property>
+    <property name="content">
+      <object class="AdwToolbarView">
+        <child type="top">
+          <object class="AdwHeaderBar" id="header_bar">
+            <child type="end">
+              <object class="GtkMenuButton">
+                <property name="primary">true</property>
+                <property name="icon-name">open-menu-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Menu</property>
+                <property name="menu-model">primary_menu</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <property name="content">
+          <object class="GtkBox" id="main_box">
+            <property name="orientation">1</property>
+            <child>
+              <object class="GtkEntry" id="entry">
+                <property name="placeholder-text">O que está na cabeça?</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="button_save">
+                <property name="label">Salvar</property>
+                <property name="halign">3</property>
+                <style>
+                  <class name="suggested-action"/>
+                </style>
+              </object>
+            </child>
+          </object>
+        </property>
+      </object>
+    </property>
+  </template>
+  <menu id="primary_menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Preferences</attribute>
+        <attribute name="action">app.preferences</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
+        <attribute name="action">win.show-help-overlay</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_About Inbox</attribute>
+        <attribute name="action">app.about</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

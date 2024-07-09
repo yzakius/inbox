@@ -1,0 +1,6 @@
+data/me.yzakius.Inbox.desktop.in
+data/me.yzakius.Inbox.metainfo.xml.in
+data/me.yzakius.Inbox.gschema.xml
+src/main.py
+src/window.py
+src/window.ui

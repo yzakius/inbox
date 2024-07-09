@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=inbox
+Exec=inbox
+Icon=me.yzakius.Inbox
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true
